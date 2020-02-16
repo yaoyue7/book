@@ -1,0 +1,101 @@
+package cn.dao.Impl;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import cn.dao.AdminDao;
+import cn.dao.BaseDao;
+import cn.entity.Administrator;
+
+public class AdminDaoImpl extends BaseDao implements AdminDao {
+	//添加图书
+	PreparedStatement a;
+	String sql;
+	Connection c;
+	ResultSet rs;
+
+	@Override
+	public int add(int bookid,String bookname,String bookautor,String booktype,float bookprice) {
+		try {
+			c = super.getConnection();
+			sql="insert into BOOKS values(?,?,?,?,?)";
+			a = c.prepareStatement(sql);
+			a.setInt(1,bookid);
+			a.setString(2, bookname);
+			a.setString(3, bookautor);
+			a.setString(4, booktype);
+			a.setFloat(5, bookprice);
+			a.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return 1;
+	}
+
+	//查看所有图书信息
+	@Override
+	public ArrayList<Administrator> show() {
+		ArrayList<Administrator> list=new ArrayList<Administrator>();
+		try {
+			c = super.getConnection();
+			sql="select * from BOOKS";
+			a = c.prepareStatement(sql);
+			rs = a.executeQuery();
+			while(rs.next()){
+				Administrator b=new Administrator();
+				b.setBookid(rs.getInt("bookid"));
+				b.setBookname(rs.getString("bookname"));
+				b.setBookautor(rs.getString("bookautor"));
+				b.setBooktype(rs.getString("booktype"));
+				b.setBookprice(rs.getFloat("bookprice"));
+				list.add(b);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return list;
+	}
+
+	//删除图书
+	@Override
+	public int del(int bookid) {
+		int i=-1;
+		try {
+			c = super.getConnection();
+			sql="delete from BOOKS where bookid=?";
+			a = c.prepareStatement(sql);
+			i=a.executeUpdate();
+			a.close();
+			c.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return i;
+	}
+
+	//修改图书信息
+	@Override
+	public int alter(int bookid,String bookname,String bookautor,String booktype,float bookprice) {
+		int i=-1;
+		c=super.getConnection();
+		sql="update BOOKS set bookname=?,bookautor=?,booktype=?,bookprice=? where bookid=?";
+		try {
+			a = c.prepareStatement(sql);
+			a.setObject(1, bookname);
+			a.setObject(2, bookautor);
+			a.setObject(3, booktype);
+			a.setFloat(4, bookprice);
+			a.setInt(5, bookid);
+			i=a.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return i;
+	}
+}

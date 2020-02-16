@@ -1,0 +1,8 @@
+package cn.dao;
+
+public interface AdminDao {
+	public int add(int bookid,String bookname,String bookautor,String booktype,float bookprice);		//添加图书
+	public int show(int bookid,String bookname,String bookautor,String booktype,float bookprice);		//查看所有图书信息
+	public int del();		//删除图书
+	public int alter();	//修改图书信息
+}

@@ -1,0 +1,7 @@
+package cn.service.Impl;
+
+import cn.service.UserService;
+
+public class UserServiceImpl implements UserService {
+	
+}

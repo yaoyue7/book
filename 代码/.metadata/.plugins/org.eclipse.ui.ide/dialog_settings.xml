@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="G:\课程设计\Java高级编程\课程设计项目\BookManager"/>
+			<item value="H:\课程设计\Java高级编程\课程设计项目\BookManager"/>
+			<item value="F:\课程设计\Java高级编程\课程设计项目\BookManager"/>
+			<item value="F:\课程设计\Java高级编程\课程设计项目\MealCard"/>
+			<item value="F:\课程设计\Java高级编程\课程设计项目\Goods"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+</section>

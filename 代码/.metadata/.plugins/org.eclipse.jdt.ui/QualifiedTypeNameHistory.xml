@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="cn.dao.BaseDao"/>
+<fullyQualifiedTypeName name="cn.dao.UserDao"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="cn.service.AdminService"/>
+<fullyQualifiedTypeName name="cn.service.UserService"/>
+<fullyQualifiedTypeName name="cn.dao.Impl.AdminDaoImpl"/>
+<fullyQualifiedTypeName name="cn.dao.Impl.UserDaoImpl"/>
+<fullyQualifiedTypeName name="cn.service.Impl.AdminServiceImpl"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="cn.entity.Administrator"/>
+<fullyQualifiedTypeName name="cn.service.Impl.UserServiceImpl"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+</qualifiedTypeNameHistroy>

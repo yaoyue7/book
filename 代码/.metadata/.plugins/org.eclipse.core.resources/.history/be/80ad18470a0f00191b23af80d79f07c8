@@ -1,0 +1,70 @@
+package cn.dao.Impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+import cn.dao.AdminDao;
+import cn.dao.BaseDao;
+
+public class AdminDaoImpl extends BaseDao implements AdminDao {
+	//添加图书
+	private PreparedStatement a;
+
+	@Override
+	public int add(int bookid,String bookname,String bookautor,String booktype,float bookprice) {
+		try {
+			Connection c = super.getConnection();
+			String sql="insert into BOOKS values(?,?,?)";
+			PreparedStatement a = c.prepareStatement(sql);
+			System.out.println("\t图书信息添加系统");
+			Scanner sc=new Scanner(System.in);
+			System.out.print("编号：");
+			int b = sc.nextInt();
+			a.setInt(1,b);
+			System.out.print("名称：");
+			String s1=sc.next();
+			a.setString(2, s1);
+			System.out.print("作者：");
+			String s2=sc.next();
+			a.setString(3, s2);
+			System.out.print("类别：");
+			String s3=sc.next();
+			a.setString(4, s3);
+			System.out.print("价格：");
+			Float p=sc.nextFloat();
+			a.setFloat(5, p);
+			a.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return 1;
+	}
+
+	//查看所有图书信息
+	@Override
+	public int show() {
+		System.out.println("\t查看所有图书信息页面");
+		System.out.print("图书编号");
+		System.out.print("图书名称");
+		System.out.print("作者");
+		System.out.print("类别");
+		System.out.print("图书价格");
+		return 1;
+	}
+
+	//删除图书
+	@Override
+	public int del() {
+		return 1;
+	}
+
+	//修改图书信息
+	@Override
+	public int alter() {
+		return 1;
+	}
+
+}

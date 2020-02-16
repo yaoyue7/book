@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;cn.book&apos; to &apos;cn.controller&apos;&#x0D;&#x0A;- Original project: &apos;Book&apos;&#x0D;&#x0A;- Original element: &apos;Book/src/cn.book&apos;&#x0D;&#x0A;- Renamed element: &apos;Book/src/cn.controller&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;cn.book&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;cn.book" name="cn.controller" qualified="false" references="true" stamp="1546997744837" textual="false" version="1.0"/>
+</session>

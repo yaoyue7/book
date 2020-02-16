@@ -1,0 +1,7 @@
+package cn.service.Impl;
+
+import cn.service.AdminService;
+
+public class AdminServiceImpl implements AdminService {
+
+}

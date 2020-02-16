@@ -1,0 +1,13 @@
+package cn.service.Impl;
+
+import cn.service.UserService;
+
+public class UserServiceImpl implements UserService {
+
+	@Override
+	public int login() {
+		
+		return 0;
+	}
+	
+}

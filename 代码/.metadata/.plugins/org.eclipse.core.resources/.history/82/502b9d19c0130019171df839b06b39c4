@@ -1,0 +1,11 @@
+package cn.service;
+
+import java.util.ArrayList;
+import cn.entity.Administrator;
+
+public interface AdminService {
+	public int add(String bookname,String bookautor,String booktype,float bookprice);
+	public ArrayList<Administrator> show();
+	public int del(int bookid);
+	public int change(int bookid,String bookname,String bookautor,String booktype,float bookprice);
+}

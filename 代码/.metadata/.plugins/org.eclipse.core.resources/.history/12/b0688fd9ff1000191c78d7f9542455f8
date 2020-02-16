@@ -1,0 +1,40 @@
+package cn.dao.Impl;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Scanner;
+
+import cn.dao.BaseDao;
+import cn.dao.UserDao;
+
+public class UserDaoImpl extends BaseDao implements UserDao {
+	@Override
+	public int admin(String username,String userpwd) {
+		int i=0;
+		try {
+			Scanner sc=new Scanner(System.in);
+			Connection c = super.getConnection();
+			System.out.println("图书管理系统登录界面");
+			System.out.print("用户名：");
+			username=sc.next();
+			System.out.print("密码：");
+			userpwd=sc.next();
+			String sql="select * from USERS where username=? and userpwd=?";
+			PreparedStatement ps=c.prepareStatement(sql);
+			ResultSet rs=ps.executeQuery();
+			if(rs.next()){
+				System.out.println("登录成功！");
+			}else{
+				System.out.println("用户名或密码错误！");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		i++;
+	return 0;
+	}
+
+}
